@@ -1,0 +1,257 @@
+@font-face {
+    font-family: "main";
+    src: url(/assets/fonts/font1.ttf);
+}
+@font-face {
+    font-family: "digital";
+    src: url(/assets/fonts/font-445153ca-d1f5-4c24-9d71-080146a71e01.ttf);
+}
+@font-face {
+    font-family: heading;
+    src: url(assets/fonts/font-90755dae-4e8a-4012-9050-cab0c59eb72e.ttf);
+}
+
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+.main {
+    width: 100%;
+    /* height: 100%; */
+    /* overflow-x: hidden; */
+   
+}
+.home{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    /* overflow: hidden; */
+    /* background-color: red; */
+}
+
+.home img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+ .home .circle {
+    position: absolute;
+    width: 50vw;
+    height: 50vw;
+    border-radius: 50%;
+    /* background-color: white; */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* overflow-x: hidden; */
+ }
+
+ .circle img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+  .top{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* background-color: red; */
+    transform:  rotate(180deg);
+
+ }
+
+ .bottom{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* background-color: blue; */
+ }
+
+ .top img:nth-child(1) {
+    transform:translate(-50%, -50%) scale(2.2);
+}
+.top img:nth-child(2) {
+    transform:translate(-50%, -50%) scale(1.5);
+}
+.top img:nth-child(3) {
+    transform:translate(-50%, -50%) scale(1);
+}
+
+.bottom img:nth-child(1) {
+    transform:translate(-50%, -50%) scale(2.2);
+}
+.bottom img:nth-child(3) {
+    transform:translate(-50%, -50%) scale(1);
+}
+.bottom img:nth-child(2) {
+    transform:translate(-50%, -50%) scale(1.5);
+}
+
+#overlay{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    /* overflow: hidden; */
+}
+
+.semicircle{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    width: 31vw;
+    height: 31vw;
+    border-radius: 50%;
+}
+
+.navbar{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 10vh;
+    width: 100%;
+    z-index: 99;
+    margin-top: 17px;
+    padding: 10px 50px;
+}
+
+.navbar h1{
+    font-family: main;
+    text-transform: uppercase;
+    font-size: 18px;
+    line-height: 16px;
+    color: #515051;
+
+}
+.rnbtm{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3px;
+}
+.rnbtm span {
+    font-size: 15px;
+    font-family: digital;
+    color: #515051;
+}
+
+.rntop{
+    display: flex;
+    align-items: center;
+}
+
+.rntop .box {
+    height: 15px;
+    width: 15px;
+    /* background-color: aqua; */
+}
+.rntop .box:nth-child(6){
+    background-color: #313131;
+}
+.rntop .box:nth-child(5){
+    background-color: #595859;
+}
+.rntop .box:nth-child(4){
+    background-color: #818080;
+}
+.rntop .box:nth-child(3){
+    background-color: #d7d7d6;
+}
+.rntop .box:nth-child(1){
+    background-color: #eaeaeb;
+}
+.rntop .box:nth-child(2){
+    background-color: #d7d7d6;
+}
+
+.btm-nav{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 10vh;
+    width: 100%;
+    z-index: 99;
+    top: 90%;
+    /* margin-top: 17px; */
+    padding: 0px 50px;
+    padding-bottom: 15px;
+}
+
+.btm-nav img{
+
+   height: 70px;
+    width: 100px;
+    margin-bottom: 25px;
+
+}
+.btm-nav h1{
+   text-transform: uppercase;
+    font-size: 11vw;
+    position: absolute;
+    font-family: heading;
+    left: 50%;
+    margin-top: 15vh;
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+    /* letter-spacing: -5px; */
+    color: #515051e8;
+}
+
+.overlay-box{
+    width: 30vw;
+    position: absolute;
+    z-index: 99;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+
+}
+.overlay-box h5{
+    text-transform: uppercase;
+    font-weight: 400;
+    font-family: main;
+    margin-bottom: 10px;
+}
+
+.overlay-box .center-img{
+    width: 100%;
+    height: 230px;
+    position: relative;
+    overflow: hidden;
+}
+
+.center-img img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    object-fit: cover;
+    transform: translate(-50%,-50%) ;
+}
+
+
+.second {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-color: #f0f0f0;
+}
+
