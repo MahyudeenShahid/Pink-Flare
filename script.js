@@ -9,7 +9,15 @@ let tl = gsap.timeline({
     }
 })
 
-tl.to(".circle .bottom img",{
+tl.to(".overlay-box", {
+    left: "50%",
+    duration: 5,
+    stagger:1,
+    ease:Power1
+},"h1")
+
+
+.to(".circle .bottom img",{
     rotate:"-180deg",
     scale:1,
     duration: 1,
@@ -42,6 +50,33 @@ tl.to(".circle .bottom img",{
     ease:Power1
 },"circle")
 
+.to(".btmn-title ",{
+    // rotate:"-180deg",
+    bottom: "-52%",
+    
+    stagger:.1,
+    ease:Power1
+},"circle")
+
+
+.to(".small-circle ",{
+    // rotate:"-180deg",
+    top: "50%",
+    scale:2,
+    duration: 1,
+    stagger:.1,
+    ease:Power1
+},"circle")
+
+.to(".small-circle ",{
+    // rotate:"-180deg",
+    
+    opacity:0,
+    duration: 1,
+    stagger:.1,
+    ease:Power1
+},"circle1")
+
 .to(".semicircle ",{
     // rotate:"-180deg",
     scale:0,
@@ -53,6 +88,15 @@ tl.to(".circle .bottom img",{
     // rotate:"-180deg",
     scale:0,
     duration: 1,
+    stagger:.1,
+    ease:Power1
+},"circle1")
+
+.to(".pf ",{
+    // rotate:"-180deg",
+    
+    bottom:"2%",
+    rotate:"0deg",
     stagger:.1,
     ease:Power1
 },"circle1")
