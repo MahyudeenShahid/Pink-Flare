@@ -1,8 +1,11 @@
+// let mainText = document.querySelector(".nav-txt").style.color
+// mainText.color = "#fff";
+
 let tl = gsap.timeline({
     scrollTrigger: {
         trigger: ".home",
         start: "top top",
-        // end: "bottom top",
+        end: "bottom -300%",
         // markers: true,
         scrub: 1,
         pin: true,
@@ -18,8 +21,63 @@ tl.to(".overlay-box", {
 
 
 .to(".circle .bottom img",{
+    // mainTextr : "#fefffe",
     rotate:"-180deg",
     scale:1,
+    duration: 2,
+    stagger:.1,
+    ease:Power1
+},"circle")
+
+.to(".navbox6",{
+    backgroundColor : "#fefffe",
+    // stagger:.1,
+    ease:Power1
+},"circle")
+.to(".navbox5",{
+    backgroundColor : "#fdfafae7",
+    // stagger:.1,
+    ease:Power1
+},"circle")
+.to(".navbox4",{
+    backgroundColor : "#fefffe9a",
+    // stagger:.1,
+    ease:Power1
+},"circle")
+.to(".navbox3",{
+    backgroundColor : "#fefffea4",
+    // stagger:.1,
+    ease:Power1
+},"circle")
+.to(".navbox2",{
+    backgroundColor : "#fefffe67",
+    // stagger:.1,
+    ease:Power1
+},"circle")
+.to(".navbox1",{
+    backgroundColor : "#fefffe2d",
+    // stagger:.1,
+    ease:Power1
+},"circle")
+
+.to(".navbox1",{
+    backgroundColor : "#fefffe2d",
+    // stagger:.1,
+    ease:Power1
+},"circle")
+.set(".btm-left", { attr: { src: "assets/images/left white.webp" } },"circle")
+.set(".btm-right", { attr: { src: "assets/images/rght white.webp" } },"circle")
+
+// .to(".bg-img",{
+//     // rotate:"-180deg",
+//     scale:1,
+//     duration: 1,
+//     stagger:.1,
+//     ease:Power1
+// },"circle")
+.to(".nav-txt , .rnbtm span ",{
+    // mainTextr : "#fff",
+    color:"#fff",
     duration: 1,
     stagger:.1,
     ease:Power1
@@ -27,13 +85,13 @@ tl.to(".overlay-box", {
 .to(".circle .top img",{
     // rotate:"-180deg",
     scale:1,
-    duration: 1,
+    duration: 2,
     stagger:.1,
     ease:Power1
 },"circle")
 .to(".overlay-box .center-img img",{
     scale:0,
-    duration: 1,
+    duration: 2,
     stagger:.1,
     ease:Power1
 },"circle")
@@ -45,7 +103,7 @@ tl.to(".overlay-box", {
 .to(".circle ",{
     // rotate:"-180deg",
     scale:.6,
-    duration: 1,
+    duration: 2,
     stagger:.1,
     ease:Power1
 },"circle")
@@ -63,7 +121,7 @@ tl.to(".overlay-box", {
     // rotate:"-180deg",
     top: "50%",
     scale:2,
-    duration: 1,
+    duration: 2.2,
     stagger:.1,
     ease:Power1
 },"circle")
@@ -97,6 +155,21 @@ tl.to(".overlay-box", {
     
     bottom:"2%",
     rotate:"0deg",
+    duration:2,
     stagger:.1,
     ease:Power1
 },"circle1")
+
+.to(".pink-box",{
+    top:"0%",
+    delay:2,
+    duration:4,
+    ease : Power1
+},"circle1")
+
+.to(".pink-box",{
+    duration:1,
+    top:"-80%",
+    ease : Power1
+})
+
