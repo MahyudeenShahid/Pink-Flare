@@ -1,16 +1,16 @@
 @font-face {
     font-family: "main";
-    src: url(/assets/fonts/font1.ttf);
+    src: url("/assets/fonts/font1.ttf");
 }
 
 @font-face {
     font-family: "digital";
-    src: url(/assets/fonts/font-445153ca-d1f5-4c24-9d71-080146a71e01.ttf);
+    src: url("/assets/fonts/font-445153ca-d1f5-4c24-9d71-080146a71e01.ttf");
 }
 
 @font-face {
     font-family: "heading";
-    src: url(assets/fonts/font-90755dae-4e8a-4012-9050-cab0c59eb72e.ttf);
+    src: url("/assets/fonts/font-90755dae-4e8a-4012-9050-cab0c59eb72e.ttf");
 }
 
 
