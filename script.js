@@ -1,36 +1,6 @@
 // let mainText = document.querySelector(".nav-txt").style.color
 // mainText.color = "#fff";
 
-function init(){
-  gsap.registerPlugin(ScrollTrigger);
-
-// Using Locomotive Scroll from Locomotive https://github.com/locomotivemtl/locomotive-scroll
-
-const locoScroll = new LocomotiveScroll({
-  el: document.querySelector("#main"),
-  smooth: true
-});
-// each time Locomotive Scroll updates, tell ScrollTrigger to update too (sync positioning)
-locoScroll.on("scroll", ScrollTrigger.update);
-
-// tell ScrollTrigger to use these proxy methods for the "#main" element since Locomotive Scroll is hijacking things
-ScrollTrigger.scrollerProxy("#main", {
-  scrollTop(value) {
-    return arguments.length ? locoScroll.scrollTo(value, 0, 0) : locoScroll.scroll.instance.scroll.y;
-  }, // we don't have to define a scrollLeft because we're only scrolling vertically.
-  getBoundingClientRect() {
-    return {top: 0, left: 0, width: window.innerWidth, height: window.innerHeight};
-  },
-  // LocomotiveScroll handles things completely differently on mobile devices - it doesn't even transform the container at all! So to get the correct behavior and avoid jitters, we should pin things with position: fixed on mobile. We sense it by checking to see if there's a transform applied to the container (the LocomotiveScroll-controlled element).
-  pinType: document.querySelector("#main").style.transform ? "transform" : "fixed"
-});
-locoScroll.on("scroll", (args) => {
-  console.log("scrolling y:", args.scroll.y);
-});
-
-}
-
-init();
 function timelineOne() {
     let tl = gsap.timeline({
         scrollTrigger: {
@@ -227,7 +197,7 @@ function timelineTwo() {
     })
         .to(".second-circle", {
             left: "50%",
-            // duration: 5,
+            duration: 5,
             stagger: .1,
             ease: Power1
         })
@@ -236,12 +206,14 @@ function timelineTwo() {
         .to(" .pur", {
             scale: 10,
             stagger: .1,
+            duration: 2,
             ease: Power1
         })
 
         .to(" .pur", {
             background: "linear-gradient(to right, #d5a7b4, #b5abd5)",
             stagger: .1,
+            duration:2,
             ease: Power1
         }, "hey")
         .to(" .h11", {
@@ -269,7 +241,7 @@ function timelineTwo() {
         }, "hey1")
         .to(" .grand-txt", {
             left: "-300%",
-            duration: 5,
+            duration: 8,
             stagger: .1,
             ease: Power1
         }, "hey1")
