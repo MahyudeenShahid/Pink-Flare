@@ -181,8 +181,8 @@ function timelineTwo() {
         scrollTrigger: {
             trigger: ".second",
             start: "top top",
-            end: "bottom -300%",
-            markers: true,
+            end: "bottom -250%",
+            // markers: true,
             scrub: 1,
             pin: true,
         }
@@ -237,11 +237,27 @@ function timelineTwo() {
             ease: Power1
         }, "hey1")
         .to(" .grand-txt", {
-            left: "-200%",
-            duration: 6,
+            left: "-300%",
+            duration: 5,
             stagger: .1,
             ease: Power1
         }, "hey1")
+
+        .to(".rectangle", {
+            top: "0%",
+            duration: 5,
+            stagger: .5,
+            ease: Power1})
+         .to(".outer-box", {
+            left: "-50%",
+            duration: 2,
+            // stagger: .1,
+            ease: Power1})
+         .to(".inner-box", {
+            left: "-25%",
+            duration: 2,
+            // stagger: .1,
+            ease: Power1})   
 }
 
 
